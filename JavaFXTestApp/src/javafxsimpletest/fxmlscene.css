@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.ClickMe {
+    -fx-background-color: #ff0000;
+    -fx-font-size: 32px;
+    -fx-font-fill: #ffffff;
+    -fx-cursor: hand;
+}
