@@ -8,13 +8,13 @@ package javafxsimpletest;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.event.ActionEvent;
+//import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+//import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.StackPane;
+//import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -28,6 +28,7 @@ public class JavaFXSimpleTest extends Application {
         
         Parent root = FXMLLoader.load(getClass().getResource("FXMLScene.fxml"));
         
+        /*
         Button btn = new Button();
         btn.setText("Say 'Hello World'");       
         btn.setOnAction(new EventHandler<ActionEvent>() {
@@ -38,19 +39,12 @@ public class JavaFXSimpleTest extends Application {
             }
         });        
         
-        //StackPane root = new StackPane();
-        //root.getChildren().add(btn);
-        
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        */
 
         Scene scene = new Scene(root);
-        
-        
-        EventHandler<KeyEvent> eventHandlerTest = new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                System.out.println("Test -> " + event.getCode());
-            }
-        };        
+              
         
         EventHandler<KeyEvent> eventHandlerTextField;
         eventHandlerTextField = (KeyEvent event) -> {
@@ -70,7 +64,8 @@ public class JavaFXSimpleTest extends Application {
         
         
         //scene.addEventHandler(KeyEvent.ANY, eventHandlerTextField);
-        scene.addEventHandler(KeyEvent.KEY_PRESSED, eventHandlerTest);
+        //scene.addEventHandler(KeyEvent.KEY_PRESSED, eventHandlerTest);
+        scene.addEventHandler(KeyEvent.KEY_PRESSED, AppController.eventHandlerTest);
         
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
